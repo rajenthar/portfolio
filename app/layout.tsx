@@ -20,6 +20,15 @@ export const metadata: Metadata = {
     title: "Rajenthar Jeganathan — Software Engineer",
     description: "Building distributed systems at scale. Java · Kafka · Kubernetes · 6+ years at Rakuten, Singapore.",
     type: "website",
+    url: "https://rajenthar.dev",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Rajenthar Jeganathan - Software Engineer",
+      },
+    ],
   },
 };
 
