@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio Website
 
-## Getting Started
+A modern, interactive portfolio showcasing professional experience, projects, and technical skills with Canvas animations.
 
-First, run the development server:
+## Tech Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Framework:** Next.js 16 (React 19, TypeScript)
+- **Styling:** Tailwind CSS 4
+- **Animations:** Canvas (nebula, shooting stars, particle network)
+- **Deployment:** Vercel
+
+## Features
+
+- Dark theme with custom design tokens
+- 3-layer Canvas background animations
+- Responsive design (mobile & desktop)
+- Experience timeline with detailed achievements
+- 46+ technical skills showcase
+- Project portfolio grid (dynamic project count)
+- Resume download (navbar + contact section)
+- Smooth scroll navigation
+
+## Project Structure
+
+```
+app/                      # Next.js app directory
+├── layout.tsx           # Root layout with Canvas background
+├── page.tsx             # Main page (imports components)
+└── globals.css          # Design tokens & Tailwind
+
+components/             # React components
+├── Navigation.tsx       # Fixed header, scroll effect
+├── Hero.tsx            # Landing section with stats
+├── About.tsx           # Bio & skills
+├── Experience.tsx      # Work timeline (9+ points per role)
+├── Projects.tsx        # Project grid
+├── Contact.tsx         # Contact links & resume download
+├── Footer.tsx          # Copyright
+└── CanvasBackground.tsx # 3D animations
+
+lib/
+├── data.ts             # Experience, projects, skills data
+└── types.ts            # TypeScript interfaces
+
+public/resume/          # Resume PDF storage
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Quick Start
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# Install
+npm install
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Dev server (http://localhost:3000)
+npm run dev
 
-## Learn More
+# Production build
+npm run build
+npm run start
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Setup
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Add resume PDF: `public/resume/RAJENTHAR_JEGANATHAN_RESUME.pdf`
+2. Edit content in `lib/data.ts`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deployment
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+git push -u origin develop
+# Create PR to master on GitHub
+# Deploy master to Vercel
+```
