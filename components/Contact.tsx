@@ -1,23 +1,27 @@
 'use client';
 
+import { useScrollReveal } from '@/lib/useScrollReveal';
+
 export default function Contact() {
+  useScrollReveal();
+
   return (
     <section id="contact" className="relative z-10 py-16 md:py-20 px-6 text-center">
       <div className="max-w-2xl mx-auto">
-        <div className="text-xs font-bold text-[var(--accent)] uppercase tracking-wider mb-4">Contact</div>
-        <h2 className="text-4xl md:text-5xl font-bold text-[var(--text-primary)] mb-8">
+        <div className="text-xs font-bold text-[var(--accent)] uppercase tracking-wider mb-4 scroll-reveal">Contact</div>
+        <h2 className="text-4xl md:text-5xl font-bold text-[var(--text-primary)] mb-8 scroll-reveal">
           Let's build<br />
           something real.
         </h2>
 
         <a
           href="mailto:rajentharj95@outlook.com"
-          className="text-2xl md:text-4xl font-bold text-[var(--accent)] hover:opacity-65 transition-opacity block mb-12"
+          className="text-2xl md:text-4xl font-bold text-[var(--accent)] hover:opacity-65 transition-opacity block mb-12 scroll-reveal"
         >
           rajentharj95@outlook.com
         </a>
 
-        <div className="flex gap-3 justify-center flex-wrap">
+        <div className="flex gap-3 justify-center flex-wrap scroll-reveal">
           <a
             href="https://github.com/rajenthar"
             target="_blank"

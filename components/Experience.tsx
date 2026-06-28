@@ -1,13 +1,16 @@
 'use client';
 
 import { experiences } from '@/lib/data';
+import { useScrollReveal } from '@/lib/useScrollReveal';
 
 export default function Experience() {
+  useScrollReveal();
+
   return (
     <section id="experience" className="relative z-10 py-16 md:py-20 px-6">
       <div className="max-w-4xl mx-auto">
-        <div className="text-xs font-bold text-[var(--accent)] uppercase tracking-wider mb-4">Timeline</div>
-        <h2 className="text-4xl md:text-5xl font-bold text-[var(--text-primary)] mb-10 leading-tight">
+        <div className="text-xs font-bold text-[var(--accent)] uppercase tracking-wider mb-4 scroll-reveal">Timeline</div>
+        <h2 className="text-4xl md:text-5xl font-bold text-[var(--text-primary)] mb-10 leading-tight scroll-reveal">
           Work experience
         </h2>
 
@@ -15,7 +18,7 @@ export default function Experience() {
           {experiences.map((exp, idx) => (
             <div
               key={idx}
-              className="flex gap-4 pb-6 border-l border-[rgba(91,127,255,0.2)] pl-5 relative"
+              className="flex gap-4 pb-6 border-l border-[rgba(91,127,255,0.2)] pl-5 relative scroll-reveal"
               style={{
                 borderLeftColor: exp.isPersonal ? 'rgba(45,226,196,0.25)' : 'rgba(91,127,255,0.2)',
               }}

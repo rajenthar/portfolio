@@ -1,15 +1,18 @@
 'use client';
 
 import { completedProjects } from '@/lib/data';
+import { useScrollReveal } from '@/lib/useScrollReveal';
 
 export default function Projects() {
+  useScrollReveal();
+
   return (
     <section id="projects" className="relative z-10 py-16 md:py-20 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="flex items-end justify-between mb-12 gap-4">
           <div>
-            <div className="text-xs font-bold text-[var(--accent)] uppercase tracking-wider mb-4">Work</div>
-            <h2 className="text-4xl md:text-5xl font-bold text-[var(--text-primary)] leading-tight">
+            <div className="text-xs font-bold text-[var(--accent)] uppercase tracking-wider mb-4 scroll-reveal">Work</div>
+            <h2 className="text-4xl md:text-5xl font-bold text-[var(--text-primary)] leading-tight scroll-reveal">
               Production-grade<br />
               projects.
             </h2>
@@ -32,7 +35,7 @@ export default function Projects() {
               <a
                 key={project.id}
                 href="#"
-                className="group bg-[var(--surface)] border border-[var(--border)] rounded-xl p-6 hover:border-[rgba(91,127,255,0.2)] transition-all hover:-translate-y-1 flex flex-col"
+                className="group bg-[var(--surface)] border border-[var(--border)] rounded-xl p-6 hover:border-[rgba(91,127,255,0.2)] transition-all hover:-translate-y-1 flex flex-col scroll-reveal"
               >
                 <div className="text-xs font-semibold uppercase mb-3 px-2 py-1 rounded w-fit bg-[rgba(91,127,255,0.1)] text-[var(--accent)]">
                   ● {project.category}
