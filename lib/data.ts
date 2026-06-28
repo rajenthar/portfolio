@@ -95,36 +95,10 @@ export const experiences: Experience[] = [
       'Utilized Jira for sprint management and Bitbucket for version control in an Agile environment',
     ],
   },
-  {
-    period: 'Personal',
-    location: 'Ongoing',
-    role: 'Builder',
-    company: 'CCMTS · Algo Trading',
-    companyInfo: 'Personal high-frequency trading system with live execution across multiple exchanges.',
-    highlights: [
-      'Built live trading system with <10ms signal-to-order latency (Binance, IBKR, Alpaca)',
-      'Real-time market microstructure analysis (OBI, VPIN, Hurst exponent indicators)',
-      'Walk-forward backtesting framework with XGBoost machine learning signals',
-      'Multi-leg position management and portfolio rebalancing',
-    ],
-    isPersonal: true,
-  },
 ];
 
 export const projects: Project[] = [
-  {
-    id: 'ccmts',
-    name: 'CCMTS',
-    description: 'Live algo trading system with sub-10ms signal-to-order latency. Multi-exchange support with real-time market microstructure analysis.',
-    category: 'trading',
-    status: 'complete',
-    metrics: [
-      { value: '<10ms', label: 'Signal-to-order' },
-      { value: '3', label: 'Exchanges' },
-    ],
-    technologies: ['Java 21', 'Chronicle Queue', 'XGBoost', 'WebSocket'],
-  },
-  // Add more projects here as you build them
+  // Add projects here as you build them
 ];
 
 // Get only completed projects for display
