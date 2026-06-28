@@ -8,21 +8,11 @@ export default function Projects() {
 
   return (
     <section id="projects" className="relative z-10 py-16 md:py-20 px-6">
-      <div className="max-w-6xl mx-auto">
-        <div className="flex items-end justify-between mb-12 gap-4">
-          <div>
-            <div className="text-xs font-bold text-[var(--accent)] uppercase tracking-wider mb-4 scroll-reveal">Work</div>
-            <h2 className="text-4xl md:text-5xl font-bold text-[var(--text-primary)] leading-tight scroll-reveal">
-              Production-grade<br />
-              projects.
-            </h2>
-          </div>
-          {completedProjects.length > 0 && (
-            <a href="#" className="text-[var(--accent)] text-sm font-semibold hover:opacity-65 transition-opacity whitespace-nowrap">
-              View all {completedProjects.length} →
-            </a>
-          )}
-        </div>
+      <div className="max-w-4xl mx-auto">
+        <div className="text-xs font-bold text-[var(--accent)] uppercase tracking-wider mb-4 scroll-reveal">Work</div>
+        <h2 className="text-4xl md:text-5xl font-bold text-[var(--text-primary)] mb-10 leading-tight scroll-reveal">
+          Personal projects
+        </h2>
 
         {completedProjects.length === 0 ? (
           <div className="text-center py-24 text-[var(--text-muted2)]">
