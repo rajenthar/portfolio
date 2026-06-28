@@ -25,11 +25,7 @@ export default function About() {
           </p>
           <p>
             Previously built production financial systems at <strong className="text-[var(--text-primary)]">ZeroBeta</strong> and
-            custom DSL compilers at ISA using ANTLR. I think in latency percentiles and failure modes.
-          </p>
-          <p>
-            On weekends I run <strong className="text-[var(--text-primary)]">CCMTS</strong> — my personal algo trading system
-            with sub-10ms signal-to-order latency on Binance, IBKR, and Alpaca.
+            custom DSL compilers at ISA using ANTLR. I built resilient systems designed for production reliability.
           </p>
         </div>
 

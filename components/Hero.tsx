@@ -39,7 +39,7 @@ export default function Hero() {
       {/* Subtitle */}
       <p className="text-lg md:text-xl text-[var(--text-muted2)] max-w-2xl mb-8 leading-relaxed animate-in fade-in duration-900 delay-200">
         <strong className="text-[var(--text-primary)]">Software Engineer</strong> building distributed systems at scale.
-        Java · Kafka · Kubernetes · 6+ years at Rakuten, Singapore.
+        Java · Kafka · Kubernetes · 6+ years experience.
       </p>
 
       {/* CTA Buttons */}
