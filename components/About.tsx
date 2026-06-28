@@ -25,7 +25,7 @@ export default function About() {
           </p>
           <p>
             Previously built production financial systems at <strong className="text-[var(--text-primary)]">ZeroBeta</strong> and
-            custom DSL compilers at ISA using ANTLR. I think in latency percentiles and failure modes.
+            custom DSL compilers at ISA using ANTLR. I built resilient systems designed for production reliability.
           </p>
         </div>
 
