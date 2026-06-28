@@ -98,7 +98,7 @@ export const experiences: Experience[] = [
 ];
 
 export const projects: Project[] = [
-  // Add projects here as you build them
+  // Add your projects here as you build them
 ];
 
 // Get only completed projects for display
