@@ -98,8 +98,27 @@ export const experiences: Experience[] = [
 ];
 
 export const projects: Project[] = [
-  // Add your projects here as you build them
+  {
+    id: 'lynx',
+    name: 'Lynx — Multi-Currency Ledger Engine',
+    description:
+      'A distributed multi-currency transfer engine built on an append-only Postgres ledger, a 3-step saga orchestrator with automatic crash recovery, and end-to-end idempotency.',
+    category: 'payments',
+    status: 'in-progress',
+    metrics: [
+      { value: '9', label: 'modules built' },
+      { value: '175', label: 'tests' },
+      { value: '7', label: 'ADRs' },
+    ],
+    technologies: [
+      'Java 21',
+      'Spring Boot 3.3',
+      'PostgreSQL',
+      'Redis',
+      'Kafka / Redpanda',
+      'Debezium CDC',
+      'OpenTelemetry',
+      'Testcontainers',
+    ],
+  },
 ];
-
-// Get only completed projects for display
-export const completedProjects = projects.filter((p) => p.status === 'complete');

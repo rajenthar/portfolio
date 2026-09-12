@@ -1,6 +1,6 @@
 'use client';
 
-import { completedProjects } from '@/lib/data';
+import { projects } from '@/lib/data';
 
 export default function Hero() {
   return (
@@ -68,7 +68,7 @@ export default function Hero() {
         </div>
         <div className="p-4 text-center md:border-r border-b md:border-b-0 border-[var(--border)]">
           <div className="text-2xl md:text-3xl font-bold text-[var(--text-primary)]">
-            {completedProjects.length}
+            {projects.length}
           </div>
           <div className="text-xs text-[var(--text-muted)] mt-1">Projects</div>
         </div>

@@ -1,7 +1,8 @@
 'use client';
 
-import { completedProjects } from '@/lib/data';
+import { projects } from '@/lib/data';
 import { useScrollReveal } from '@/lib/useScrollReveal';
+import LynxSagaAnimation from './LynxSagaAnimation';
 
 export default function Projects() {
   useScrollReveal();
@@ -14,25 +15,33 @@ export default function Projects() {
           Personal projects
         </h2>
 
-        {completedProjects.length === 0 ? (
+        {projects.length === 0 ? (
           <div className="text-center py-24 text-[var(--text-muted2)]">
             <p className="text-lg mb-2">No projects yet</p>
             <p className="text-sm">Projects will appear here as you build them. Update lib/data.ts to add them.</p>
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {completedProjects.map((project) => (
-              <a
+            {projects.map((project) => (
+              <div
                 key={project.id}
-                href="#"
                 className="group bg-[var(--surface)] border border-[var(--border)] rounded-xl p-6 hover:border-[rgba(91,127,255,0.2)] transition-all hover:-translate-y-1 flex flex-col scroll-reveal"
               >
-                <div className="text-xs font-semibold uppercase mb-3 px-2 py-1 rounded w-fit bg-[rgba(91,127,255,0.1)] text-[var(--accent)]">
-                  ● {project.category}
+                <div className="flex flex-wrap items-center gap-2 mb-3">
+                  <div className="text-xs font-semibold uppercase px-2 py-1 rounded w-fit bg-[rgba(91,127,255,0.1)] text-[var(--accent)]">
+                    ● {project.category}
+                  </div>
+                  {project.status === 'in-progress' && (
+                    <div className="text-xs font-semibold uppercase px-2 py-1 rounded w-fit bg-white/5 border border-[var(--border2)] text-[var(--text-muted2)]">
+                      In progress
+                    </div>
+                  )}
                 </div>
 
                 <h3 className="text-xl font-bold text-[var(--text-primary)] mb-2">{project.name}</h3>
                 <p className="text-sm text-[var(--text-muted2)] mb-4 flex-grow">{project.description}</p>
+
+                {project.id === 'lynx' && <LynxSagaAnimation className="mb-4 -mx-1 opacity-80" />}
 
                 {project.metrics && project.metrics.length > 0 && (
                   <div className="flex gap-6 mb-4 text-sm">
@@ -55,7 +64,7 @@ export default function Projects() {
                     </span>
                   ))}
                 </div>
-              </a>
+              </div>
             ))}
           </div>
         )}
