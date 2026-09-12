@@ -105,6 +105,7 @@ export const projects: Project[] = [
       'A distributed multi-currency transfer engine built on an append-only Postgres ledger, a 3-step saga orchestrator with automatic crash recovery, and end-to-end idempotency.',
     category: 'payments',
     status: 'in-progress',
+    url: 'https://github.com/rajenthar/lynx',
     metrics: [
       { value: '9', label: 'modules built' },
       { value: '175', label: 'tests' },
