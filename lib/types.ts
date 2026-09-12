@@ -7,6 +7,8 @@ export interface Project {
   description: string;
   category: BadgeType;
   status: ProjectStatus;
+  /** Public repo or write-up URL. Omit to render the card as a non-link. */
+  url?: string;
   metrics?: Array<{
     value: string;
     label: string;
