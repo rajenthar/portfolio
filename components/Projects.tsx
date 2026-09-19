@@ -39,10 +39,16 @@ export default function Projects() {
                   <div className="text-xs font-semibold uppercase px-2 py-1 rounded w-fit bg-[rgba(91,127,255,0.1)] text-[var(--accent)]">
                     ● {project.category}
                   </div>
-                  {project.status === 'in-progress' && (
-                    <div className="text-xs font-semibold uppercase px-2 py-1 rounded w-fit bg-white/5 border border-[var(--border2)] text-[var(--text-muted2)]">
-                      In progress
+                  {project.liveUrl ? (
+                    <div className="text-xs font-semibold uppercase px-2 py-1 rounded w-fit bg-[rgba(45,226,196,0.1)] text-[var(--accent3)]">
+                      ● Live
                     </div>
+                  ) : (
+                    project.status === 'in-progress' && (
+                      <div className="text-xs font-semibold uppercase px-2 py-1 rounded w-fit bg-white/5 border border-[var(--border2)] text-[var(--text-muted2)]">
+                        In progress
+                      </div>
+                    )
                   )}
                 </div>
 
