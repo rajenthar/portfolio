@@ -102,15 +102,11 @@ export const projects: Project[] = [
     id: 'lynx',
     name: 'Lynx — Multi-Currency Ledger Engine',
     description:
-      'A distributed multi-currency transfer engine built on an append-only Postgres ledger, a 3-step saga orchestrator with automatic crash recovery, and end-to-end idempotency.',
+      'A deployed multi-currency transfer system: an append-only Postgres ledger, a 3-step saga orchestrator with crash recovery, exactly-once transfers, and CDC-driven read models.',
     category: 'payments',
     status: 'in-progress',
-    url: 'https://github.com/rajenthar/lynx',
-    metrics: [
-      { value: '9', label: 'modules built' },
-      { value: '175', label: 'tests' },
-      { value: '7', label: 'ADRs' },
-    ],
+    liveUrl: 'https://lynx.rajenthar.dev',
+    repoUrl: 'https://github.com/rajenthar/lynx',
     technologies: [
       'Java 21',
       'Spring Boot 3.3',
@@ -119,7 +115,7 @@ export const projects: Project[] = [
       'Kafka / Redpanda',
       'Debezium CDC',
       'OpenTelemetry',
-      'Testcontainers',
+      'Next.js',
     ],
   },
 ];
